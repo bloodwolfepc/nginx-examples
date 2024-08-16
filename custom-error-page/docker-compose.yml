@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:1.21-alpine
+    volumes:
+      - "./nginx.conf:/usr/share/nginx/nginx.conf"
+      - "./404.html:/usr/share/nginx/html/404.html"
+      - "./50x.html:/usr/share/nginx/html/50x.html"
+    ports:
+      - 9997:9997
